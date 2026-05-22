@@ -1,0 +1,3 @@
+# Netlify config for the Meghana Reddy portfolio (static site, no build step)
+[build]
+  publish = "."
