@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meghana Reddy · Content Strategist & AI Content Specialist</title>
-    <meta name="description" content="Content Strategist & AI Content Specialist. 600K+ audience managed, 100+ videos produced, 3x watch-time growth. Building AI video pipelines in production for Swaroop Talks, Scaler, and Scaler School of Technology.">
+    <meta name="description" content="Content Strategist & AI Content Specialist. 600K+ audience managed, 100+ videos produced, 3x watch-time growth. Building AI video pipelines in production for Swaroop Talks and Scaler.">
     <meta name="author" content="Meghana Reddy">
     <meta name="theme-color" content="#0B0B0D">
     <meta property="og:title" content="Meghana Reddy · Content Strategist & AI Content Specialist">
-    <meta property="og:description" content="I turn tech brands into content engines. 600K+ audience, 100+ videos, 3x growth, plus AI video pipelines running in production.">
+    <meta property="og:description" content="I turn tech brands into content engines. AI video pipelines, in production.">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='24' width='100' height='100' fill='%23FF6B6B'/><text x='50' y='71' font-size='62' font-family='Georgia,serif' font-style='italic' font-weight='600' text-anchor='middle' fill='white'>M</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,76 +57,58 @@
         section[id], header[id] { scroll-margin-top: 5rem; }
         ::selection { background: rgba(255,107,107,0.28); color: #fff; }
 
-        /* Scrollbar */
         ::-webkit-scrollbar { width: 9px; }
         ::-webkit-scrollbar-track { background: #0B0B0D; }
         ::-webkit-scrollbar-thumb { background: #2A2930; border-radius: 5px; }
         ::-webkit-scrollbar-thumb:hover { background: #3A3942; }
 
-        /* Film grain overlay */
         .grain {
             position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: 0.045;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
-        /* Scroll progress */
         #progress {
             position: fixed; top: 0; left: 0; height: 2px; width: 0%;
             background: linear-gradient(90deg, #FF6B6B, #FF8E8E);
             z-index: 70; transition: width 0.1s linear;
         }
 
-        /* Eyebrow label */
         .eyebrow {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
         }
 
-        /* Reveal on scroll, hidden only when JS is active so no-JS users still see content */
-        html.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.8s cubic-bezier(0.2,0.65,0.25,1), transform 0.8s cubic-bezier(0.2,0.65,0.25,1); }
+        html.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.2,0.65,0.25,1), transform 0.8s cubic-bezier(0.2,0.65,0.25,1); }
         html.js .reveal.in { opacity: 1; transform: none; }
         .r-d1 { transition-delay: 0.08s; }
         .r-d2 { transition-delay: 0.16s; }
         .r-d3 { transition-delay: 0.24s; }
         .r-d4 { transition-delay: 0.32s; }
-        .r-d5 { transition-delay: 0.40s; }
 
-        /* Gradient text */
         .grad-coral {
             background: linear-gradient(120deg, #FF8E8E, #FF6B6B 55%, #E0524F);
             -webkit-background-clip: text; background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Primary button */
         .btn-glow {
             box-shadow: 0 10px 34px -12px rgba(255,107,107,0.55);
             transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
         }
         .btn-glow:hover { box-shadow: 0 14px 42px -10px rgba(255,107,107,0.8); transform: translateY(-2px); }
 
-        /* Card hover */
         .card { transition: transform 0.4s cubic-bezier(0.2,0.65,0.25,1), border-color 0.3s ease, background-color 0.3s ease; }
         .card:hover { transform: translateY(-5px); border-color: rgba(255,107,107,0.4); }
 
-        /* Hero ambient blobs */
         @keyframes drift {
             0%, 100% { transform: translate(0,0) scale(1); }
             50% { transform: translate(40px,-30px) scale(1.12); }
         }
         .blob { filter: blur(90px); animation: drift 16s ease-in-out infinite; }
 
-        /* Photo composition */
         .photo-frame img { transition: transform 0.7s cubic-bezier(0.2,0.65,0.25,1); }
         .photo-frame:hover img { transform: scale(1.045); }
 
-        /* Marquee */
-        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .marquee { -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
-        .marquee-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
-        .marquee:hover .marquee-track { animation-play-state: paused; }
-
-        /* Nav underline */
         .nav-link { position: relative; }
         .nav-link::after {
             content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px;
@@ -134,46 +116,30 @@
         }
         .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-        /* Timeline */
         .timeline-line {
-            position: absolute; left: 0; top: 4px; bottom: 4px; width: 1.5px;
-            background: linear-gradient(to bottom, #FF6B6B 0%, #2A2930 70%);
+            position: absolute; left: 5.25px; top: 8px; bottom: 8px; width: 1.5px;
+            background: linear-gradient(to bottom, #FF6B6B 0%, #2A2930 75%);
         }
         .timeline-dot {
-            position: absolute; left: -5.25px; top: 4px; width: 12px; height: 12px;
+            position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
             border-radius: 50%; background: #0B0B0D; border: 2px solid #FF6B6B;
         }
         .timeline-dot::after { content: ''; position: absolute; inset: 2.5px; border-radius: 50%; background: #FF6B6B; }
 
-        /* Tag pill */
         .tag {
-            display: inline-flex; align-items: center; padding: 7px 14px; border-radius: 50px;
-            font-size: 0.8rem; font-weight: 500; border: 1px solid #2A2930;
+            display: inline-flex; align-items: center; padding: 6px 13px; border-radius: 50px;
+            font-size: 0.78rem; font-weight: 500; border: 1px solid #2A2930;
             color: #C7C5CC; background: rgba(255,255,255,0.015); transition: all 0.22s ease;
         }
-        .tag:hover { border-color: rgba(255,107,107,0.55); color: #FF8E8E; transform: translateY(-2px); }
+        .tag:hover { border-color: rgba(255,107,107,0.55); color: #FF8E8E; }
 
-        /* Tool chip */
-        .tool {
-            display: flex; align-items: center; gap: 8px; padding: 9px 13px; border-radius: 10px;
-            background: #161519; border: 1px solid #2A2930; font-size: 0.82rem; color: #C7C5CC;
-            font-weight: 500; transition: all 0.22s ease;
-        }
-        .tool:hover { border-color: rgba(255,107,107,0.5); color: #fff; transform: translateY(-2px); }
-        .tool .dot { width: 6px; height: 6px; border-radius: 50%; background: #FF6B6B; flex-shrink: 0; }
-
-        /* Quote mark */
-        .qmark { font-family: 'Fraunces', serif; font-size: 5.5rem; line-height: 0.6; color: #FF6B6B; opacity: 0.32; }
-
-        /* Hamburger */
         .hamburger span { display: block; width: 22px; height: 1.8px; margin: 5px 0; background: #ECEAE6; transition: all 0.3s ease; }
         .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
         .mobile-nav { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-        .mobile-nav.open { max-height: 420px; }
+        .mobile-nav.open { max-height: 360px; }
 
-        /* Link arrow nudge */
         .link-arrow svg { transition: transform 0.25s ease; }
         .link-arrow:hover svg { transform: translateX(4px); }
 
@@ -186,10 +152,9 @@
         .pain-card.solved .check { background: #FF6B6B; border-color: #FF6B6B; }
         .pain-card.solved .check-icon { opacity: 1; transform: scale(1); }
         .pain-card.solved .pain-text { text-decoration: line-through; text-decoration-color: rgba(255,107,107,0.55); opacity: 0.5; }
-        .pain-card.solved .answer { max-height: 280px; opacity: 1; }
+        .pain-card.solved .answer { max-height: 260px; opacity: 1; }
         #pain-result.all-solved { border-color: rgba(255,107,107,0.5); box-shadow: 0 0 44px -14px rgba(255,107,107,0.5); }
 
-        /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
             *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
             .reveal { opacity: 1 !important; transform: none !important; }
@@ -202,18 +167,17 @@
 <div class="grain"></div>
 <div id="progress"></div>
 
-<!-- ==================== NAVIGATION ==================== -->
+<!-- ==================== NAV ==================== -->
 <nav id="nav" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
         <div class="flex items-center justify-between h-16">
             <a href="#hero" class="font-display text-xl font-medium text-paper tracking-tight">Meghana Reddy<span class="text-coral">.</span></a>
             <div class="hidden md:flex items-center gap-9">
                 <a href="#about" class="nav-link text-sm text-muted hover:text-paper transition">About</a>
                 <a href="#ai-pipeline" class="nav-link text-sm text-muted hover:text-paper transition">AI Pipeline</a>
-                <a href="#experience" class="nav-link text-sm text-muted hover:text-paper transition">Experience</a>
                 <a href="#work" class="nav-link text-sm text-muted hover:text-paper transition">Work</a>
-                <a href="#testimonials" class="nav-link text-sm text-muted hover:text-paper transition">Reviews</a>
-                <a href="Meghana_Reddy_Resume.pdf" download class="group inline-flex items-center gap-2 bg-coral hover:bg-coral-deep text-white text-sm font-medium px-4 py-2 rounded-lg transition">
+                <a href="#contact" class="nav-link text-sm text-muted hover:text-paper transition">Contact</a>
+                <a href="Meghana_Reddy_Resume.pdf" download class="inline-flex items-center gap-2 bg-coral hover:bg-coral-deep text-white text-sm font-medium px-4 py-2 rounded-lg transition">
                     Résumé
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 4 5-4"/><path d="M5 21h14"/></svg>
                 </a>
@@ -226,9 +190,7 @@
             <div class="flex flex-col gap-1 pb-4 pt-1">
                 <a href="#about" onclick="toggleNav()" class="text-muted hover:text-paper text-sm py-2">About</a>
                 <a href="#ai-pipeline" onclick="toggleNav()" class="text-muted hover:text-paper text-sm py-2">AI Pipeline</a>
-                <a href="#experience" onclick="toggleNav()" class="text-muted hover:text-paper text-sm py-2">Experience</a>
                 <a href="#work" onclick="toggleNav()" class="text-muted hover:text-paper text-sm py-2">Work</a>
-                <a href="#testimonials" onclick="toggleNav()" class="text-muted hover:text-paper text-sm py-2">Reviews</a>
                 <a href="#contact" onclick="toggleNav()" class="text-muted hover:text-paper text-sm py-2">Contact</a>
                 <a href="Meghana_Reddy_Resume.pdf" download class="bg-coral text-white text-sm font-medium px-4 py-2.5 rounded-lg text-center mt-2">Download Résumé</a>
             </div>
@@ -237,20 +199,19 @@
 </nav>
 
 <!-- ==================== HERO ==================== -->
-<header id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16 md:pb-20">
+<header id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
     <div class="absolute inset-0 -z-10">
-        <div class="blob absolute top-[-12%] left-[6%] w-[440px] h-[440px] rounded-full bg-coral/12"></div>
-        <div class="blob absolute bottom-[2%] right-[-6%] w-[420px] h-[420px] rounded-full bg-coral-deep/10" style="animation-delay: -8s;"></div>
+        <div class="blob absolute top-[-12%] left-[6%] w-[420px] h-[420px] rounded-full bg-coral/12"></div>
+        <div class="blob absolute bottom-[2%] right-[-6%] w-[400px] h-[400px] rounded-full bg-coral-deep/10" style="animation-delay: -8s;"></div>
         <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,107,107,0.10), transparent 70%);"></div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 w-full">
         <div class="grid lg:grid-cols-12 gap-y-9 lg:gap-x-12">
 
-            <!-- A: eyebrow + headline -->
             <div class="lg:col-start-1 lg:col-span-7 lg:row-start-1 self-end">
                 <p class="eyebrow text-muted reveal mb-6">
-                    Content Strategist <span class="text-coral">·</span> AI Content Specialist <span class="text-coral">·</span> Social Media
+                    Content Strategist <span class="text-coral">·</span> AI Content Specialist
                 </p>
                 <h1 class="font-display font-medium text-paper leading-[1.06] tracking-[-0.02em] reveal r-d1"
                     style="font-size: clamp(2.4rem, 5vw, 3.65rem);">
@@ -259,20 +220,15 @@
                 </h1>
             </div>
 
-            <!-- Photo -->
             <div class="lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-2 reveal r-d2">
-                <div class="relative max-w-[380px] mx-auto lg:max-w-none lg:h-full">
-                    <!-- decorative offset frame -->
+                <div class="relative max-w-[360px] mx-auto lg:max-w-none lg:h-full">
                     <div class="absolute -inset-2.5 sm:-inset-4 rounded-[2.1rem] border border-coral/30 rotate-[3deg]"></div>
-                    <!-- sparkle accent -->
                     <div class="absolute -top-3 -right-1 text-coral text-2xl select-none" aria-hidden="true">✦</div>
-                    <!-- photo -->
                     <div class="photo-frame relative rounded-[1.6rem] overflow-hidden border border-line-2 bg-gradient-to-br from-coral to-coral-deep aspect-[4/5] lg:aspect-auto lg:h-full">
                         <span class="absolute inset-0 flex items-center justify-center font-display italic font-semibold text-white/35 select-none" style="font-size: 9rem;" aria-hidden="true">M</span>
                         <img src="meghana.jpg" alt="Meghana Reddy, Content Strategist" onerror="this.style.display='none'"
                              class="relative w-full h-full object-cover" style="object-position: 50% 22%;">
                     </div>
-                    <!-- floating availability badge -->
                     <div class="absolute -bottom-4 -left-3 sm:-left-5 bg-ink/95 backdrop-blur border border-line rounded-full pl-3 pr-4 py-2.5 flex items-center gap-2.5 shadow-2xl">
                         <span class="relative flex h-2.5 w-2.5">
                             <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
@@ -283,33 +239,32 @@
                 </div>
             </div>
 
-            <!-- B: subhead + CTAs + metrics -->
             <div class="lg:col-start-1 lg:col-span-7 lg:row-start-2 self-start">
-                <p class="text-muted text-lg md:text-xl max-w-xl leading-relaxed reveal r-d3 mt-1 mb-8">
-                    2+ years building content systems for India's top tech creators and edtech brands like <span class="text-paper">Swaroop Talks</span>, <span class="text-paper">Scaler</span>, and <span class="text-paper">Scaler School of Technology</span>.
+                <p class="text-muted text-lg leading-relaxed reveal r-d3 mt-1 mb-8 max-w-lg">
+                    2+ years building content systems for India's top tech creators and edtech brands, including <span class="text-paper">Swaroop Talks</span> and <span class="text-paper">Scaler</span>.
                 </p>
-                <div class="flex flex-wrap items-center gap-4 reveal r-d3 mb-11">
+                <div class="flex flex-wrap items-center gap-4 reveal r-d3 mb-10">
                     <a href="#work" class="btn-glow group inline-flex items-center gap-2.5 bg-coral hover:bg-coral-deep text-white font-semibold px-6 py-3.5 rounded-xl">
                         See my work
                         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
                     </a>
                     <a href="Meghana_Reddy_Resume.pdf" download class="inline-flex items-center gap-2.5 border border-line-2 hover:border-coral text-paper font-semibold px-6 py-3.5 rounded-xl transition hover:bg-white/[0.02]">
-                        Download résumé
+                        Résumé
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 4 5-4"/><path d="M5 21h14"/></svg>
                     </a>
                 </div>
-                <div class="metrics grid grid-cols-3 border-y border-line max-w-xl reveal r-d4">
+                <div class="metrics grid grid-cols-3 border-y border-line max-w-lg reveal r-d4">
                     <div class="py-5 pr-4 sm:pr-6">
                         <div class="font-display text-3xl sm:text-4xl font-medium text-paper tracking-tight"><span class="counter" data-target="600">0</span>K<span class="text-coral">+</span></div>
-                        <p class="eyebrow text-faint mt-2 text-[0.62rem]">Audience managed</p>
+                        <p class="eyebrow text-faint mt-2 text-[0.62rem]">Audience</p>
                     </div>
                     <div class="py-5 px-4 sm:px-6 border-x border-line">
                         <div class="font-display text-3xl sm:text-4xl font-medium text-paper tracking-tight"><span class="counter" data-target="100">0</span><span class="text-coral">+</span></div>
-                        <p class="eyebrow text-faint mt-2 text-[0.62rem]">Videos produced</p>
+                        <p class="eyebrow text-faint mt-2 text-[0.62rem]">Videos</p>
                     </div>
                     <div class="py-5 pl-4 sm:pl-6">
                         <div class="font-display text-3xl sm:text-4xl font-medium text-paper tracking-tight">3<span class="text-coral">×</span></div>
-                        <p class="eyebrow text-faint mt-2 text-[0.62rem]">Watch-time growth</p>
+                        <p class="eyebrow text-faint mt-2 text-[0.62rem]">Watch-time</p>
                     </div>
                 </div>
             </div>
@@ -318,176 +273,113 @@
     </div>
 </header>
 
-<!-- ==================== BRAND MARQUEE ==================== -->
-<section class="py-7 border-y border-line bg-ink-2/60 overflow-hidden">
-    <div class="marquee">
-        <div class="marquee-track">
-            <div class="flex items-center shrink-0">
-                <span class="eyebrow text-faint px-8">Worked with</span>
-                <span class="font-display text-2xl text-muted px-8">Swaroop Talks</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Scaler</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Code With Swaroop</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Scaler School of Technology</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">MentiBY</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Bytes.SST</span><span class="text-coral text-lg">✦</span>
-            </div>
-            <div class="flex items-center shrink-0" aria-hidden="true">
-                <span class="eyebrow text-faint px-8">Worked with</span>
-                <span class="font-display text-2xl text-muted px-8">Swaroop Talks</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Scaler</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Code With Swaroop</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Scaler School of Technology</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">MentiBY</span><span class="text-coral text-lg">✦</span>
-                <span class="font-display text-2xl text-muted px-8">Bytes.SST</span><span class="text-coral text-lg">✦</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== SOUND FAMILIAR (interactive) ==================== -->
-<section id="fit" class="py-24 md:py-32 bg-ink-2 border-b border-line">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
+<!-- ==================== SOUND FAMILIAR ==================== -->
+<section id="fit" class="py-20 md:py-28 bg-ink-2 border-y border-line">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="eyebrow flex items-center gap-3 mb-7 reveal">
             <span class="text-coral">✦</span>
             <span class="h-px w-8 bg-coral/40"></span>
             <span class="text-muted">If you're hiring</span>
         </div>
         <div class="reveal">
-            <h2 class="font-display text-3xl md:text-[2.9rem] font-medium text-paper leading-[1.1] tracking-tight mb-4">
+            <h2 class="font-display text-3xl md:text-[2.6rem] font-medium text-paper leading-[1.1] tracking-tight mb-3">
                 Sound <span class="italic text-coral">familiar?</span>
             </h2>
-            <p class="text-muted text-lg max-w-2xl leading-relaxed mb-12">
-                Every manager who has hired for content carries a few scars. Tap the ones you've lived through, then see how Meghana is built to be the opposite.
+            <p class="text-muted leading-relaxed max-w-xl mb-10">
+                Tap the headaches you've had with a content hire. See how Meghana is built to be the opposite.
             </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 reveal">
-            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-6" onclick="togglePain(this)" aria-pressed="false">
-                <div class="flex items-start justify-between gap-4">
-                    <p class="pain-text font-display text-lg font-medium text-paper leading-snug">"I have to chase them on every task."</p>
-                    <span class="check shrink-0 w-6 h-6 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
-                        <svg class="check-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-5" onclick="togglePain(this)" aria-pressed="false">
+                <div class="flex items-start justify-between gap-3">
+                    <p class="pain-text font-display text-base font-medium text-paper leading-snug">"I have to chase them on every task."</p>
+                    <span class="check shrink-0 w-5 h-5 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
+                        <svg class="check-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                     </span>
                 </div>
                 <div class="answer">
                     <p class="text-muted text-sm leading-relaxed mt-3 pt-3 border-t border-line"><span class="text-coral font-medium">Meghana:</span> Leave the task with her. If she doesn't know how, she learns it and ships by the deadline. No chasing.</p>
                 </div>
             </button>
-
-            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-6" onclick="togglePain(this)" aria-pressed="false">
-                <div class="flex items-start justify-between gap-4">
-                    <p class="pain-text font-display text-lg font-medium text-paper leading-snug">"New hires take forever to get our brand."</p>
-                    <span class="check shrink-0 w-6 h-6 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
-                        <svg class="check-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                    </span>
-                </div>
-                <div class="answer">
-                    <p class="text-muted text-sm leading-relaxed mt-3 pt-3 border-t border-line"><span class="text-coral font-medium">Meghana:</span> Two years across creator and brand teams trained her to read brand guidelines fast. She'll sound like you, quickly.</p>
-                </div>
-            </button>
-
-            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-6" onclick="togglePain(this)" aria-pressed="false">
-                <div class="flex items-start justify-between gap-4">
-                    <p class="pain-text font-display text-lg font-medium text-paper leading-snug">"They finish tasks but don't own the result."</p>
-                    <span class="check shrink-0 w-6 h-6 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
-                        <svg class="check-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-5" onclick="togglePain(this)" aria-pressed="false">
+                <div class="flex items-start justify-between gap-3">
+                    <p class="pain-text font-display text-base font-medium text-paper leading-snug">"They finish tasks but don't own the result."</p>
+                    <span class="check shrink-0 w-5 h-5 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
+                        <svg class="check-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                     </span>
                 </div>
                 <div class="answer">
                     <p class="text-muted text-sm leading-relaxed mt-3 pt-3 border-t border-line"><span class="text-coral font-medium">Meghana:</span> She owns the outcome, not just the to-do list. The result is hers to deliver, start to finish.</p>
                 </div>
             </button>
-
-            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-6" onclick="togglePain(this)" aria-pressed="false">
-                <div class="flex items-start justify-between gap-4">
-                    <p class="pain-text font-display text-lg font-medium text-paper leading-snug">"Their hours and availability are unpredictable."</p>
-                    <span class="check shrink-0 w-6 h-6 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
-                        <svg class="check-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                    </span>
-                </div>
-                <div class="answer">
-                    <p class="text-muted text-sm leading-relaxed mt-3 pt-3 border-t border-line"><span class="text-coral font-medium">Meghana:</span> No random work-from-home, no irregularities. Steady and dependable, every single week.</p>
-                </div>
-            </button>
-
-            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-6" onclick="togglePain(this)" aria-pressed="false">
-                <div class="flex items-start justify-between gap-4">
-                    <p class="pain-text font-display text-lg font-medium text-paper leading-snug">"I never know what's live or what's next."</p>
-                    <span class="check shrink-0 w-6 h-6 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
-                        <svg class="check-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-5" onclick="togglePain(this)" aria-pressed="false">
+                <div class="flex items-start justify-between gap-3">
+                    <p class="pain-text font-display text-base font-medium text-paper leading-snug">"I never know what's live or what's next."</p>
+                    <span class="check shrink-0 w-5 h-5 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
+                        <svg class="check-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                     </span>
                 </div>
                 <div class="answer">
                     <p class="text-muted text-sm leading-relaxed mt-3 pt-3 border-t border-line"><span class="text-coral font-medium">Meghana:</span> Clear updates by default: the plan, what went live, what's in progress. You're never left guessing.</p>
                 </div>
             </button>
-
-            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-6" onclick="togglePain(this)" aria-pressed="false">
-                <div class="flex items-start justify-between gap-4">
-                    <p class="pain-text font-display text-lg font-medium text-paper leading-snug">"Strategy is all guesswork, no data."</p>
-                    <span class="check shrink-0 w-6 h-6 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
-                        <svg class="check-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <button type="button" class="pain-card card w-full text-left bg-surface border border-line rounded-2xl p-5" onclick="togglePain(this)" aria-pressed="false">
+                <div class="flex items-start justify-between gap-3">
+                    <p class="pain-text font-display text-base font-medium text-paper leading-snug">"New hires take forever to get our brand."</p>
+                    <span class="check shrink-0 w-5 h-5 rounded-full border-2 border-line-2 flex items-center justify-center transition-colors duration-200">
+                        <svg class="check-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                     </span>
                 </div>
                 <div class="answer">
-                    <p class="text-muted text-sm leading-relaxed mt-3 pt-3 border-t border-line"><span class="text-coral font-medium">Meghana:</span> She tracks the reports and reads what the audience actually wants, then shifts strategy on real data.</p>
+                    <p class="text-muted text-sm leading-relaxed mt-3 pt-3 border-t border-line"><span class="text-coral font-medium">Meghana:</span> Years across creator and brand teams trained her to read brand guidelines fast. She'll sound like you, quickly.</p>
                 </div>
             </button>
         </div>
 
-        <div id="pain-result" class="mt-6 bg-surface border border-line rounded-2xl p-7 md:p-9 flex flex-col md:flex-row md:items-center justify-between gap-7 reveal transition-all duration-500">
+        <div id="pain-result" class="mt-5 bg-surface border border-line rounded-2xl p-6 md:p-7 flex flex-col md:flex-row md:items-center justify-between gap-6 reveal transition-all duration-500">
             <div class="flex items-center gap-5">
-                <div class="font-display text-5xl md:text-6xl font-medium grad-coral leading-none shrink-0"><span id="pain-count">0</span><span class="text-faint text-3xl">/6</span></div>
-                <p id="pain-message" class="text-muted leading-relaxed max-w-sm">Tap a card above. Be honest, every content hire has a story behind them.</p>
+                <div class="font-display text-4xl md:text-5xl font-medium grad-coral leading-none shrink-0"><span id="pain-count">0</span><span class="text-faint text-2xl">/4</span></div>
+                <p id="pain-message" class="text-muted text-sm leading-relaxed max-w-sm">Tap a card. Be honest, every content hire has a story behind them.</p>
             </div>
-            <div class="flex flex-wrap gap-3 shrink-0">
-                <a href="https://wa.me/918185924767?text=Hi%20Meghana%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20content%20role." target="_blank" rel="noopener" class="btn-glow inline-flex items-center gap-2.5 bg-coral hover:bg-coral-deep text-white font-semibold px-6 py-3.5 rounded-xl">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
-                    Book a call on WhatsApp
-                </a>
-                <a href="#work" class="inline-flex items-center gap-2 border border-line-2 hover:border-coral text-paper font-semibold px-6 py-3.5 rounded-xl transition hover:bg-white/[0.02]">See the work</a>
-            </div>
+            <a href="https://wa.me/918185924767?text=Hi%20Meghana%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20content%20role." target="_blank" rel="noopener" class="btn-glow inline-flex items-center justify-center gap-2.5 bg-coral hover:bg-coral-deep text-white font-semibold px-6 py-3.5 rounded-xl shrink-0">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+                Book a call on WhatsApp
+            </a>
         </div>
     </div>
 </section>
 
 <!-- ==================== ABOUT ==================== -->
-<section id="about" class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-14 reveal">
+<section id="about" class="py-20 md:py-28">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="eyebrow flex items-center gap-3 mb-10 reveal">
             <span class="text-coral">01</span>
             <span class="h-px w-8 bg-coral/40"></span>
             <span class="text-muted">About</span>
         </div>
 
-        <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
             <div class="lg:col-span-7 reveal">
-                <h2 class="font-display text-3xl md:text-[2.7rem] font-medium text-paper leading-[1.12] tracking-tight mb-9">
-                    Me, <span class="italic text-coral">in 30 seconds.</span>
+                <h2 class="font-display text-2xl md:text-[2rem] font-medium text-paper leading-[1.3] tracking-tight mb-6">
+                    I don't just write content.<br><span class="italic text-coral">I build content systems.</span>
                 </h2>
-                <div class="space-y-6 text-muted text-lg leading-relaxed">
-                    <p>I'm Meghana, a content strategist who has spent <span class="text-paper font-medium">2+ years in the trenches of tech-education content</span>. I've worked alongside one of India's biggest tech creators (<span class="text-paper">Swaroop Talks, 450K+ YouTube subscribers</span>), managed content for <span class="text-paper">Scaler</span>, and built everything from DSA course modules to viral Instagram reels.</p>
-                    <p>I don't just write content. <span class="text-paper font-medium">I build content systems.</span> I script, strategize, manage calendars, coordinate editors and designers, and track what actually moves the needle. My edge is understanding tech audiences deeply: what they search for, what they click, what makes them trust a brand.</p>
-                    <p>Right now I'm running <span class="text-paper font-medium">AI video pipelines in production</span>, using HeyGen's API for avatar video, ElevenLabs for audio, and LLM-powered workflows that ship finished content for Scaler School of Technology. I don't just prompt AI tools. <span class="text-coral font-medium">I build with them.</span></p>
-                </div>
-
-                <div class="flex flex-wrap gap-2.5 mt-10">
-                    <span class="tag">AI Video Pipelines</span>
-                    <span class="tag">Prompt Engineering</span>
-                    <span class="tag">YouTube Growth</span>
+                <p class="text-muted text-lg leading-relaxed">
+                    I'm Meghana, a content strategist with 2+ years building content for India's top tech creators and edtech brands. I've scripted <span class="text-paper">100+ videos</span>, managed a <span class="text-paper">600K+ audience</span>, and built a DSA course for <span class="text-paper">1,000+ students</span>. Right now I run <span class="text-paper">AI video pipelines in production</span> for Scaler, shipping 10+ videos a week. I don't just prompt AI tools, <span class="text-coral font-medium">I build with them.</span>
+                </p>
+                <div class="flex flex-wrap gap-2.5 mt-7">
                     <span class="tag">Content Strategy</span>
-                    <span class="tag">Reels &amp; Carousels</span>
+                    <span class="tag">AI Video Pipelines</span>
                     <span class="tag">Scriptwriting &amp; Hooks</span>
-                    <span class="tag">Course Design</span>
-                    <span class="tag">Team Coordination</span>
+                    <span class="tag">YouTube Growth</span>
+                    <span class="tag">Prompt Engineering</span>
                     <span class="tag">Brand Voice</span>
-                    <span class="tag">SEO &amp; GEO</span>
                 </div>
             </div>
 
             <div class="lg:col-span-5 reveal r-d2">
-                <div class="bg-surface border border-line rounded-2xl p-7 lg:sticky lg:top-24">
-                    <div class="flex items-center gap-4 pb-6 border-b border-line">
+                <div class="bg-surface border border-line rounded-2xl p-6">
+                    <div class="flex items-center gap-4 pb-5 border-b border-line">
                         <div class="w-14 h-14 rounded-xl overflow-hidden bg-gradient-to-br from-coral to-coral-deep shrink-0 relative">
                             <span class="absolute inset-0 flex items-center justify-center font-display italic text-2xl font-semibold text-white select-none" aria-hidden="true">M</span>
                             <img src="meghana.jpg" alt="Meghana Reddy" onerror="this.style.display='none'" class="relative w-full h-full object-cover" style="object-position: 50% 20%;">
@@ -498,37 +390,29 @@
                         </div>
                     </div>
                     <dl class="divide-y divide-line">
-                        <div class="flex items-center justify-between py-3.5">
+                        <div class="flex items-center justify-between py-3">
                             <dt class="eyebrow text-faint">Based in</dt>
                             <dd class="text-sm text-paper">Chennai, TN</dd>
                         </div>
-                        <div class="flex items-center justify-between py-3.5">
+                        <div class="flex items-center justify-between py-3">
                             <dt class="eyebrow text-faint">Open to</dt>
                             <dd class="text-sm text-paper">Bangalore · Remote</dd>
                         </div>
-                        <div class="flex items-center justify-between py-3.5">
+                        <div class="flex items-center justify-between py-3">
                             <dt class="eyebrow text-faint">Experience</dt>
                             <dd class="text-sm text-paper">2+ years</dd>
                         </div>
-                        <div class="flex items-center justify-between py-3.5">
-                            <dt class="eyebrow text-faint">Focus</dt>
-                            <dd class="text-sm text-paper">Content &amp; AI systems</dd>
-                        </div>
-                        <div class="flex items-center justify-between py-3.5">
+                        <div class="flex items-center justify-between py-3">
                             <dt class="eyebrow text-faint">Languages</dt>
                             <dd class="text-sm text-paper">English · Telugu · Hindi</dd>
                         </div>
-                        <div class="flex items-center justify-between py-3.5">
+                        <div class="flex items-center justify-between py-3">
                             <dt class="eyebrow text-faint">Status</dt>
                             <dd class="text-sm text-emerald-400 flex items-center gap-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Available
                             </dd>
                         </div>
                     </dl>
-                    <a href="#contact" class="link-arrow mt-5 inline-flex items-center gap-2 text-sm font-medium text-coral hover:text-coral-bright transition">
-                        Get in touch
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
-                    </a>
                 </div>
             </div>
         </div>
@@ -536,25 +420,23 @@
 </section>
 
 <!-- ==================== AI PIPELINE ==================== -->
-<section id="ai-pipeline" class="py-24 md:py-32 bg-ink-2 border-y border-line">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
+<section id="ai-pipeline" class="py-20 md:py-28 bg-ink-2 border-y border-line">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="eyebrow flex items-center gap-3 mb-7 reveal">
             <span class="text-coral">02</span>
             <span class="h-px w-8 bg-coral/40"></span>
-            <span class="text-muted">AI in practice</span>
+            <span class="text-muted">What sets me apart</span>
         </div>
         <div class="reveal">
-            <h2 class="font-display text-3xl md:text-[2.9rem] font-medium text-paper leading-[1.1] tracking-tight mb-5">
+            <h2 class="font-display text-3xl md:text-[2.6rem] font-medium text-paper leading-[1.1] tracking-tight mb-3">
                 I build AI video pipelines.<br><span class="italic text-coral">In production. Today.</span>
             </h2>
-            <p class="text-muted text-lg max-w-2xl leading-relaxed mb-14">
-                Not "I've used ChatGPT." I run an end-to-end AI video system that ships real content for real brands, every single week. Here's the whole pipeline.
+            <p class="text-muted leading-relaxed max-w-xl mb-10">
+                Not "I've used ChatGPT." I run the full pipeline end to end, shipping 10+ finished videos a week for Scaler, about 70% faster than a traditional shoot.
             </p>
         </div>
 
-        <!-- Pipeline -->
-        <div class="grid md:grid-cols-4 gap-3 md:gap-2 mb-14">
-            <!-- Step 1 -->
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
             <div class="relative reveal">
                 <div class="card h-full bg-surface border border-line rounded-xl p-5">
                     <div class="flex items-center justify-between mb-4">
@@ -565,11 +447,9 @@
                     </div>
                     <p class="font-display text-lg font-medium text-paper">Research &amp; Script</p>
                     <p class="text-muted text-sm mt-1.5 leading-relaxed">Spot trending topics, then research and write the script.</p>
-                    <p class="eyebrow text-coral mt-3 text-[0.62rem]">Claude · ChatGPT</p>
                 </div>
-                <div class="hidden md:flex absolute top-1/2 -right-2.5 -translate-y-1/2 z-10 w-5 h-5 items-center justify-center rounded-full bg-coral text-white text-xs">→</div>
+                <div class="hidden md:flex absolute top-1/2 -right-2 -translate-y-1/2 z-10 w-4 h-4 items-center justify-center rounded-full bg-coral text-white text-[0.6rem]">→</div>
             </div>
-            <!-- Step 2 -->
             <div class="relative reveal r-d1">
                 <div class="card h-full bg-surface border border-line rounded-xl p-5">
                     <div class="flex items-center justify-between mb-4">
@@ -579,12 +459,10 @@
                         <span class="font-mono text-xs text-faint">02</span>
                     </div>
                     <p class="font-display text-lg font-medium text-paper">Audio &amp; Video</p>
-                    <p class="text-muted text-sm mt-1.5 leading-relaxed">Generate natural voice-over and avatar video at scale.</p>
-                    <p class="eyebrow text-coral mt-3 text-[0.62rem]">ElevenLabs · HeyGen</p>
+                    <p class="text-muted text-sm mt-1.5 leading-relaxed">Generate voice-over and avatar video with ElevenLabs and HeyGen.</p>
                 </div>
-                <div class="hidden md:flex absolute top-1/2 -right-2.5 -translate-y-1/2 z-10 w-5 h-5 items-center justify-center rounded-full bg-coral text-white text-xs">→</div>
+                <div class="hidden md:flex absolute top-1/2 -right-2 -translate-y-1/2 z-10 w-4 h-4 items-center justify-center rounded-full bg-coral text-white text-[0.6rem]">→</div>
             </div>
-            <!-- Step 3 -->
             <div class="relative reveal r-d2">
                 <div class="card h-full bg-surface border border-line rounded-xl p-5">
                     <div class="flex items-center justify-between mb-4">
@@ -594,12 +472,10 @@
                         <span class="font-mono text-xs text-faint">03</span>
                     </div>
                     <p class="font-display text-lg font-medium text-paper">Editing</p>
-                    <p class="text-muted text-sm mt-1.5 leading-relaxed">Post-production, B-roll, and on-screen captions.</p>
-                    <p class="eyebrow text-coral mt-3 text-[0.62rem]">Premiere · Canva</p>
+                    <p class="text-muted text-sm mt-1.5 leading-relaxed">Post-production, B-roll and on-screen captions.</p>
                 </div>
-                <div class="hidden md:flex absolute top-1/2 -right-2.5 -translate-y-1/2 z-10 w-5 h-5 items-center justify-center rounded-full bg-coral text-white text-xs">→</div>
+                <div class="hidden md:flex absolute top-1/2 -right-2 -translate-y-1/2 z-10 w-4 h-4 items-center justify-center rounded-full bg-coral text-white text-[0.6rem]">→</div>
             </div>
-            <!-- Step 4 -->
             <div class="relative reveal r-d3">
                 <div class="card h-full bg-surface border border-coral/45 rounded-xl p-5" style="box-shadow: 0 0 30px -12px rgba(255,107,107,0.4);">
                     <div class="flex items-center justify-between mb-4">
@@ -610,646 +486,135 @@
                     </div>
                     <p class="font-display text-lg font-medium text-paper">Publish &amp; CTA</p>
                     <p class="text-muted text-sm mt-1.5 leading-relaxed">Schedule across platforms with a clear call-to-action.</p>
-                    <p class="eyebrow text-coral mt-3 text-[0.62rem]">Live weekly</p>
                 </div>
             </div>
-        </div>
-
-        <!-- AI stats -->
-        <div class="grid sm:grid-cols-3 gap-5 mb-8">
-            <div class="card bg-surface border border-line rounded-xl p-7 reveal">
-                <p class="font-display text-4xl font-medium grad-coral">10+</p>
-                <p class="text-paper font-medium mt-2">AI videos per week</p>
-                <p class="text-muted text-sm mt-2.5 leading-relaxed">AI-generated content produced at scale for Bytes.SST, Scaler School of Technology's Instagram.</p>
-            </div>
-            <div class="card bg-surface border border-line rounded-xl p-7 reveal r-d1">
-                <p class="font-display text-4xl font-medium grad-coral">5+</p>
-                <p class="text-paper font-medium mt-2">AI tools in daily workflow</p>
-                <p class="text-muted text-sm mt-2.5 leading-relaxed">HeyGen, ElevenLabs, Claude, ChatGPT and Canva AI, all integrated into one production pipeline.</p>
-            </div>
-            <div class="card bg-surface border border-line rounded-xl p-7 reveal r-d2">
-                <p class="font-display text-4xl font-medium grad-coral">70%</p>
-                <p class="text-paper font-medium mt-2">Faster production</p>
-                <p class="text-muted text-sm mt-2.5 leading-relaxed">The AI pipeline cut video production time versus traditional scripting and shooting workflows.</p>
-            </div>
-        </div>
-
-        <!-- Why it matters -->
-        <div class="relative bg-surface border border-line rounded-2xl p-7 md:p-9 pl-8 md:pl-12 reveal overflow-hidden">
-            <div class="absolute left-0 top-0 bottom-0 w-1 bg-coral"></div>
-            <p class="eyebrow text-coral mb-3">Why it matters</p>
-            <p class="text-paper text-lg md:text-xl leading-relaxed font-display font-normal">
-                In 2026, <span class="text-coral">34% of senior content roles</span> require AI proficiency. Most candidates can only say "I've used ChatGPT." I can show you the pipeline I built, the content it ships, and the brand it serves, running in production right now. That's the difference between AI-aware and <span class="italic text-coral">AI-native.</span>
-            </p>
         </div>
     </div>
 </section>
 
-<!-- ==================== EXPERIENCE ==================== -->
-<section id="experience" class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
+<!-- ==================== WORK ==================== -->
+<section id="work" class="py-20 md:py-28">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="eyebrow flex items-center gap-3 mb-7 reveal">
             <span class="text-coral">03</span>
             <span class="h-px w-8 bg-coral/40"></span>
-            <span class="text-muted">Experience</span>
+            <span class="text-muted">Work</span>
         </div>
-        <h2 class="font-display text-3xl md:text-[2.7rem] font-medium text-paper leading-tight tracking-tight mb-14 reveal">
+        <h2 class="font-display text-3xl md:text-[2.6rem] font-medium text-paper leading-tight tracking-tight mb-11 reveal">
             Where I've <span class="italic text-coral">built.</span>
         </h2>
 
-        <div class="relative pl-9 md:pl-12 space-y-10">
+        <div class="relative space-y-8">
             <div class="timeline-line"></div>
 
-            <!-- Entry 1 -->
-            <div class="relative reveal">
+            <div class="relative pl-9 reveal">
                 <div class="timeline-dot"></div>
-                <div class="card bg-surface border border-line rounded-xl p-6 md:p-7">
-                    <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-                        <div class="flex items-center gap-3.5">
-                            <div class="w-11 h-11 rounded-lg bg-coral/12 border border-coral/25 text-coral font-mono text-[0.65rem] flex items-center justify-center shrink-0">SST</div>
-                            <div>
-                                <h3 class="font-display text-xl font-medium text-paper leading-snug">AI Content Producer &amp; Operations</h3>
-                                <p class="text-muted text-sm">Bytes.SST (Scaler School of Technology) + MentiBY Technologies</p>
-                            </div>
-                        </div>
-                        <span class="inline-flex items-center gap-1.5 text-coral text-xs font-medium bg-coral/10 px-3 py-1.5 rounded-full whitespace-nowrap">
-                            <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>Current
-                        </span>
-                    </div>
-                    <ul class="space-y-2.5 text-muted text-[0.95rem] mt-4">
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Runs an end-to-end AI video pipeline: research and scripting, audio and video generation, editing, then publishing with a CTA.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Produces 10+ AI-generated videos per week for Scaler SST's Instagram.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Manages operations at MentiBY Technologies, Swaroop's edtech startup.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Creates reels and carousels that simplify complex tech topics for Instagram audiences.</li>
-                    </ul>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <h3 class="font-display text-xl font-medium text-paper">AI Content Producer &amp; Operations</h3>
+                    <span class="inline-flex items-center gap-1.5 text-coral text-xs font-medium"><span class="w-1.5 h-1.5 rounded-full bg-coral"></span>Current</span>
+                </div>
+                <p class="text-muted text-sm mt-0.5 mb-2.5">Scaler + MentiBY Technologies</p>
+                <p class="text-muted leading-relaxed">Runs an end-to-end AI video pipeline that ships 10+ videos a week for Scaler, and manages operations at MentiBY, Swaroop's edtech startup.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">10+ videos / week</span>
+                    <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">70% faster production</span>
                 </div>
             </div>
 
-            <!-- Entry 2 -->
-            <div class="relative reveal">
+            <div class="relative pl-9 reveal">
                 <div class="timeline-dot"></div>
-                <div class="card bg-surface border border-line rounded-xl p-6 md:p-7">
-                    <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-                        <div class="flex items-center gap-3.5">
-                            <div class="w-11 h-11 rounded-lg bg-surface-2 border border-line-2 text-muted font-mono text-[0.7rem] flex items-center justify-center shrink-0">SY</div>
-                            <div>
-                                <h3 class="font-display text-xl font-medium text-paper leading-snug">Systems Engineer</h3>
-                                <p class="text-muted text-sm">Sify Technologies</p>
-                            </div>
-                        </div>
-                        <span class="text-muted text-xs font-mono bg-surface-2 px-3 py-1.5 rounded-full whitespace-nowrap">Jul 2024 – Present</span>
-                    </div>
-                    <p class="text-muted text-sm italic mb-3">A full-time engineering role held alongside freelance content work, proof of execution speed.</p>
-                    <ul class="space-y-2.5 text-muted text-[0.95rem]">
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Built a 5-app Digital Office suite (Ticketing, Tasks, Approvals, FAQ, Compliance) with Power Apps, Power Automate &amp; SharePoint.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Created a Python + Selenium bot for ServiceNow, using LLMs to cut manual work.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>The engineering background gives me technical depth most content strategists lack.</li>
-                    </ul>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <h3 class="font-display text-xl font-medium text-paper">Technical Content Writer</h3>
+                    <span class="text-faint text-xs font-mono">Jun 2023 – Mar 2024</span>
                 </div>
-            </div>
-
-            <!-- Entry 3 -->
-            <div class="relative reveal">
-                <div class="timeline-dot"></div>
-                <div class="card bg-surface border border-line rounded-xl p-6 md:p-7">
-                    <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-                        <div class="flex items-center gap-3.5">
-                            <div class="w-11 h-11 rounded-lg bg-surface-2 border border-line-2 text-muted font-mono text-[0.7rem] flex items-center justify-center shrink-0">SC</div>
-                            <div>
-                                <h3 class="font-display text-xl font-medium text-paper leading-snug">Content &amp; Community Intern</h3>
-                                <p class="text-muted text-sm">Scaler by InterviewBit</p>
-                            </div>
-                        </div>
-                        <span class="text-muted text-xs font-mono bg-surface-2 px-3 py-1.5 rounded-full whitespace-nowrap">May – Jun 2024</span>
-                    </div>
-                    <ul class="space-y-2.5 text-muted text-[0.95rem] mt-4">
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Built an organic growth content strategy across Instagram, LinkedIn, YouTube and Quora.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Created a UGC content framework and trained students to create on YouTube, LinkedIn and Quora.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Authored blog posts and ORM scripts that strengthened Scaler's brand trust with students.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Entry 4 -->
-            <div class="relative reveal">
-                <div class="timeline-dot"></div>
-                <div class="card bg-surface border border-line rounded-xl p-6 md:p-7">
-                    <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-                        <div class="flex items-center gap-3.5">
-                            <div class="w-11 h-11 rounded-lg bg-surface-2 border border-line-2 text-muted font-mono text-[0.62rem] flex items-center justify-center shrink-0">CWS</div>
-                            <div>
-                                <h3 class="font-display text-xl font-medium text-paper leading-snug">Technical Content Writer</h3>
-                                <p class="text-muted text-sm">Code With Swaroop (Swaroop Talks)</p>
-                            </div>
-                        </div>
-                        <span class="text-muted text-xs font-mono bg-surface-2 px-3 py-1.5 rounded-full whitespace-nowrap">Jun 2023 – Mar 2024</span>
-                    </div>
-                    <p class="text-muted text-sm italic mb-3">10 months embedded in a fast-growing creator brand: 450K+ YouTube, 296K Instagram.</p>
-                    <ul class="space-y-2.5 text-muted text-[0.95rem]">
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Managed 3 social platforms, driving organic growth across handles with 900K+ combined followers.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Designed and built the DSA with Java course (modules, quizzes, handbooks) for 1,000+ students.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Scripted and strategized 100+ YouTube videos and Instagram content.</li>
-                        <li class="flex gap-3"><span class="text-coral mt-1.5 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Scaled the learning community to 5,000+ learners within one year.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== CASE STUDIES ==================== -->
-<section id="work" class="py-24 md:py-32 bg-ink-2 border-y border-line">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
-            <span class="text-coral">04</span>
-            <span class="h-px w-8 bg-coral/40"></span>
-            <span class="text-muted">Selected work</span>
-        </div>
-        <div class="reveal">
-            <h2 class="font-display text-3xl md:text-[2.9rem] font-medium text-paper leading-tight tracking-tight mb-4">
-                Case <span class="italic text-coral">studies.</span>
-            </h2>
-            <p class="text-muted text-lg max-w-2xl leading-relaxed mb-14">Every project has a challenge, an action, and a measurable result. No fluff.</p>
-        </div>
-
-        <!-- Featured case -->
-        <article class="card bg-surface border border-line rounded-2xl overflow-hidden mb-6 reveal">
-            <div class="grid md:grid-cols-12">
-                <div class="md:col-span-4 p-7 md:p-9 border-b md:border-b-0 md:border-r border-line flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-3 mb-5">
-                            <span class="font-display text-5xl font-medium text-coral/30">01</span>
-                            <span class="eyebrow text-coral bg-coral/10 px-2.5 py-1 rounded">Featured</span>
-                        </div>
-                        <h3 class="font-display text-2xl font-medium text-paper leading-snug mb-2">Swaroop Talks: Full Social Media Management</h3>
-                        <p class="text-muted text-sm">YouTube (450K) · Instagram (296K + 111K) · LinkedIn</p>
-                    </div>
-                    <a href="https://drive.google.com/drive/folders/1OchUBvAaXhWstPa2RCg8gtKKfwLGFyS5?usp=sharing" target="_blank" rel="noopener" class="link-arrow inline-flex items-center gap-2 text-sm font-medium text-coral hover:text-coral-bright transition mt-7">
-                        View case study
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                <p class="text-muted text-sm mt-0.5 mb-2.5">Code With Swaroop (Swaroop Talks)</p>
+                <p class="text-muted leading-relaxed">Scripted and strategized 100+ YouTube videos, built a DSA with Java course from scratch, and drove organic growth across handles with 900K+ combined followers.</p>
+                <div class="flex flex-wrap items-center gap-2 mt-3">
+                    <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">1,000+ students</span>
+                    <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">5,000+ community</span>
+                    <a href="https://www.codewithswaroop.com/" target="_blank" rel="noopener" class="link-arrow inline-flex items-center gap-1.5 text-coral text-xs font-medium ml-1 hover:text-coral-bright transition">
+                        Course site
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
                     </a>
                 </div>
-                <div class="md:col-span-8 p-7 md:p-9 space-y-5">
-                    <div>
-                        <p class="eyebrow text-coral mb-1.5">Challenge</p>
-                        <p class="text-muted leading-relaxed">A fast-growing tech creator needed someone to own content direction across multiple platforms while keeping brand voice perfectly consistent.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-1.5">What I did</p>
-                        <p class="text-muted leading-relaxed">Owned content strategy, wrote scripts and hooks, coordinated editors and designers, and planned posting schedules around audience-behavior patterns. Built the content-calendar system from scratch.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-2.5">Impact</p>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="inline-flex items-center gap-1.5 bg-coral/10 text-coral px-3.5 py-1.5 rounded-full text-sm font-medium"><span class="w-1 h-1 rounded-full bg-coral"></span>3× watch-time lift</span>
-                            <span class="inline-flex items-center gap-1.5 bg-coral/10 text-coral px-3.5 py-1.5 rounded-full text-sm font-medium"><span class="w-1 h-1 rounded-full bg-coral"></span>600K+ combined audience</span>
-                            <span class="inline-flex items-center gap-1.5 bg-coral/10 text-coral px-3.5 py-1.5 rounded-full text-sm font-medium"><span class="w-1 h-1 rounded-full bg-coral"></span>100+ videos</span>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </article>
 
-        <!-- Other cases -->
-        <div class="grid md:grid-cols-3 gap-6">
-            <article class="card bg-surface border border-line rounded-2xl p-7 reveal">
-                <div class="flex items-center justify-between mb-5">
-                    <span class="font-display text-5xl font-medium text-coral/25">02</span>
+            <div class="relative pl-9 reveal">
+                <div class="timeline-dot"></div>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <h3 class="font-display text-xl font-medium text-paper">Content &amp; Community Intern</h3>
+                    <span class="text-faint text-xs font-mono">May – Jun 2024</span>
                 </div>
-                <h3 class="font-display text-xl font-medium text-paper leading-snug">Code With Swaroop: Course &amp; Content</h3>
-                <p class="text-muted text-xs mt-1.5 mb-5">codewithswaroop.com + YouTube</p>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <p class="eyebrow text-coral mb-1 text-[0.62rem]">Challenge</p>
-                        <p class="text-muted leading-relaxed">Build a complete DSA with Java course from zero, structured for self-paced learning, no existing curriculum.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-1 text-[0.62rem]">What I did</p>
-                        <p class="text-muted leading-relaxed">Designed course architecture, wrote all modules and quizzes, created handbooks, and produced supporting content to drive enrollment.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-2 text-[0.62rem]">Impact</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">1,000+ students</span>
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">4.8★ rating</span>
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">5,000+ community</span>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://www.codewithswaroop.com/" target="_blank" rel="noopener" class="link-arrow inline-flex items-center gap-2 text-sm font-medium text-coral hover:text-coral-bright transition mt-5">
-                    View course
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-                </a>
-            </article>
-
-            <article class="card bg-surface border border-line rounded-2xl p-7 reveal r-d1">
-                <div class="flex items-center justify-between mb-5">
-                    <span class="font-display text-5xl font-medium text-coral/25">03</span>
-                </div>
-                <h3 class="font-display text-xl font-medium text-paper leading-snug">Scaler: Organic Growth &amp; UGC Strategy</h3>
-                <p class="text-muted text-xs mt-1.5 mb-5">Instagram · LinkedIn · YouTube · Quora</p>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <p class="eyebrow text-coral mb-1 text-[0.62rem]">Challenge</p>
-                        <p class="text-muted leading-relaxed">Scaler needed authentic, student-driven content to build brand trust, not corporate-sounding posts.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-1 text-[0.62rem]">What I did</p>
-                        <p class="text-muted leading-relaxed">Created a UGC content framework, trained students to produce content, wrote blog posts and ORM scripts, and managed multi-platform posting.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-2 text-[0.62rem]">Impact</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">Organic growth boost</span>
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">UGC framework adopted</span>
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">Higher brand trust</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card bg-surface border border-line rounded-2xl p-7 reveal r-d2">
-                <div class="flex items-center justify-between mb-5">
-                    <span class="font-display text-5xl font-medium text-coral/25">04</span>
-                </div>
-                <h3 class="font-display text-xl font-medium text-paper leading-snug">Bytes.SST: AI-Powered Instagram Content</h3>
-                <p class="text-muted text-xs mt-1.5 mb-5">Instagram (@bytes.sst)</p>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <p class="eyebrow text-coral mb-1 text-[0.62rem]">Challenge</p>
-                        <p class="text-muted leading-relaxed">Produce high-volume, engaging tech content for Scaler SST's Instagram, faster than traditional production allows.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-1 text-[0.62rem]">What I did</p>
-                        <p class="text-muted leading-relaxed">Built an AI video pipeline with HeyGen API, ElevenLabs and LLM scripting, owning research, generation and publishing end-to-end.</p>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-2 text-[0.62rem]">Impact</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">10+ videos/week</span>
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">70% faster</span>
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-xs font-medium">High engagement</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== HOW I WORK ==================== -->
-<section class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
-            <span class="text-coral">05</span>
-            <span class="h-px w-8 bg-coral/40"></span>
-            <span class="text-muted">How I work</span>
-        </div>
-        <div class="reveal">
-            <h2 class="font-display text-3xl md:text-[2.9rem] font-medium text-paper leading-[1.1] tracking-tight mb-4">
-                I don't just create content.<br><span class="italic text-coral">I build content systems.</span>
-            </h2>
-            <p class="text-muted text-lg max-w-2xl leading-relaxed mb-14">The difference between a content writer and a content strategist is systems thinking. Here's the workflow.</p>
-        </div>
-
-        <div class="grid md:grid-cols-4 gap-5">
-            <div class="card bg-surface border border-line rounded-2xl p-7 reveal">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-coral" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-                    </span>
-                    <span class="font-display text-4xl font-medium text-line-2">01</span>
-                </div>
-                <h4 class="font-display text-lg font-medium text-paper mb-2">Research &amp; Audit</h4>
-                <p class="text-muted text-sm leading-relaxed">Audience analysis, competitor mapping, trending-topic identification, and cross-platform gap analysis.</p>
+                <p class="text-muted text-sm mt-0.5 mb-2.5">Scaler</p>
+                <p class="text-muted leading-relaxed">Built Scaler's organic growth and UGC content strategy across Instagram, LinkedIn, YouTube and Quora, and trained students to create their own content.</p>
             </div>
-            <div class="card bg-surface border border-line rounded-2xl p-7 reveal r-d1">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-coral" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
-                    </span>
-                    <span class="font-display text-4xl font-medium text-line-2">02</span>
+
+            <div class="relative pl-9 reveal">
+                <div class="timeline-dot"></div>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <h3 class="font-display text-xl font-medium text-paper">Systems Engineer</h3>
+                    <span class="text-faint text-xs font-mono">Jul 2024 – Present</span>
                 </div>
-                <h4 class="font-display text-lg font-medium text-paper mb-2">Strategy &amp; Calendar</h4>
-                <p class="text-muted text-sm leading-relaxed">Content calendars aligned with audience behavior, platform algorithms and business goals, planned 4 to 6 weeks out.</p>
-            </div>
-            <div class="card bg-surface border border-line rounded-2xl p-7 reveal r-d2">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-coral" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>
-                    </span>
-                    <span class="font-display text-4xl font-medium text-line-2">03</span>
-                </div>
-                <h4 class="font-display text-lg font-medium text-paper mb-2">Create &amp; Coordinate</h4>
-                <p class="text-muted text-sm leading-relaxed">Script, produce, coordinate editors and designers, run the AI tools pipeline, and adapt content per platform.</p>
-            </div>
-            <div class="card bg-surface border border-line rounded-2xl p-7 reveal r-d3">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-coral" aria-hidden="true">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-5 4 3 5-7"/></svg>
-                    </span>
-                    <span class="font-display text-4xl font-medium text-line-2">04</span>
-                </div>
-                <h4 class="font-display text-lg font-medium text-paper mb-2">Measure &amp; Optimize</h4>
-                <p class="text-muted text-sm leading-relaxed">Track watch-time, engagement, audience growth and CTR. Double down on what works, kill what doesn't.</p>
+                <p class="text-muted text-sm mt-0.5 mb-2.5">Sify Technologies</p>
+                <p class="text-muted leading-relaxed">Built a 5-app Digital Office suite and a Python automation bot. The engineering background gives me technical depth most content strategists don't have.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== TOOLKIT ==================== -->
-<section class="py-24 md:py-32 bg-ink-2 border-y border-line">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+<!-- ==================== REVIEW ==================== -->
+<section class="py-20 md:py-28 bg-ink-2 border-y border-line">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
         <div class="eyebrow flex items-center gap-3 mb-8 reveal">
-            <span class="text-coral">06</span>
+            <span class="text-coral">✦</span>
             <span class="h-px w-8 bg-coral/40"></span>
-            <span class="text-muted">Toolkit</span>
+            <span class="text-muted">A word from someone I've worked with</span>
         </div>
-        <h2 class="font-display text-3xl md:text-[2.7rem] font-medium text-paper leading-tight tracking-tight mb-14 reveal">
-            Tools I use <span class="italic text-coral">daily.</span>
-        </h2>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="reveal">
-                <p class="eyebrow text-coral mb-5">AI &amp; Generation</p>
-                <div class="flex flex-wrap gap-2.5">
-                    <span class="tool"><span class="dot"></span>HeyGen</span>
-                    <span class="tool"><span class="dot"></span>ElevenLabs</span>
-                    <span class="tool"><span class="dot"></span>Claude</span>
-                    <span class="tool"><span class="dot"></span>ChatGPT</span>
-                    <span class="tool"><span class="dot"></span>MS Copilot</span>
-                    <span class="tool"><span class="dot"></span>Canva AI</span>
-                </div>
+        <blockquote class="reveal">
+            <p class="font-display text-xl md:text-2xl font-normal text-paper leading-[1.5]">
+                Meghana joined my team when Code With Swaroop was finding its voice, and she became one of the people who shaped it. She didn't just write content, <span class="text-coral italic">she understood why we were creating it.</span> She's the one I kept calling back: first for Code With Swaroop, then MentiBY, now Scaler. That should tell you everything.
+            </p>
+        </blockquote>
+        <div class="flex items-center gap-4 mt-8 reveal r-d1">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-coral to-coral-deep flex items-center justify-center font-display italic font-semibold text-white shrink-0">S</div>
+            <div>
+                <p class="text-paper font-semibold">B. Jyothi Swaroop</p>
+                <p class="text-muted text-sm">Associate Director, Scaler · Founder, MentiBY</p>
             </div>
-            <div class="reveal r-d1">
-                <p class="eyebrow text-coral mb-5">Content &amp; Design</p>
-                <div class="flex flex-wrap gap-2.5">
-                    <span class="tool"><span class="dot"></span>Canva</span>
-                    <span class="tool"><span class="dot"></span>Figma</span>
-                    <span class="tool"><span class="dot"></span>Premiere</span>
-                    <span class="tool"><span class="dot"></span>Notion</span>
-                    <span class="tool"><span class="dot"></span>Google Docs</span>
-                    <span class="tool"><span class="dot"></span>Trello</span>
-                </div>
-            </div>
-            <div class="reveal r-d2">
-                <p class="eyebrow text-coral mb-5">Platforms</p>
-                <div class="flex flex-wrap gap-2.5">
-                    <span class="tool"><span class="dot"></span>YouTube Studio</span>
-                    <span class="tool"><span class="dot"></span>IG Insights</span>
-                    <span class="tool"><span class="dot"></span>LinkedIn</span>
-                    <span class="tool"><span class="dot"></span>Quora</span>
-                    <span class="tool"><span class="dot"></span>WordPress</span>
-                </div>
-            </div>
-            <div class="reveal r-d3">
-                <p class="eyebrow text-coral mb-5">Dev &amp; Cloud</p>
-                <div class="flex flex-wrap gap-2.5">
-                    <span class="tool"><span class="dot"></span>AWS</span>
-                    <span class="tool"><span class="dot"></span>Azure</span>
-                    <span class="tool"><span class="dot"></span>Python</span>
-                    <span class="tool"><span class="dot"></span>Git</span>
-                    <span class="tool"><span class="dot"></span>REST APIs</span>
-                    <span class="tool"><span class="dot"></span>Selenium</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== TESTIMONIALS ==================== -->
-<section id="testimonials" class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
-            <span class="text-coral">07</span>
-            <span class="h-px w-8 bg-coral/40"></span>
-            <span class="text-muted">What they say</span>
-        </div>
-        <h2 class="font-display text-3xl md:text-[2.7rem] font-medium text-paper leading-tight tracking-tight mb-14 reveal">
-            Reviews from people<br>I've <span class="italic text-coral">worked with.</span>
-        </h2>
-
-        <figure class="card bg-surface border border-line rounded-2xl p-8 md:p-12 mb-6 reveal">
-            <div class="qmark mb-2">"</div>
-            <blockquote class="font-display text-xl md:text-[1.7rem] font-normal text-paper leading-[1.5] -mt-6">
-                Meghana joined my team when Code With Swaroop was still finding its voice, and she became one of the key people who helped shape it. She didn't just write content; <span class="text-coral italic">she understood why we were creating it.</span> She moved seamlessly between scripting YouTube videos, creating Instagram reels, building course materials, and managing our content calendar. Most people are good at one of these. Meghana handled all of them. She's the one I kept calling back: first for Code With Swaroop, then MentiBY, now Bytes.SST. That should tell you everything.
-            </blockquote>
-            <figcaption class="flex items-center gap-4 mt-8 pt-7 border-t border-line">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-coral to-coral-deep flex items-center justify-center font-display italic font-semibold text-white shrink-0">S</div>
-                <div>
-                    <p class="text-paper font-semibold">B. Jyothi Swaroop</p>
-                    <p class="text-muted text-sm">Associate Director, Scaler · Founder, MentiBY · Swaroop Talks (450K+ YouTube)</p>
-                </div>
-            </figcaption>
-        </figure>
-
-        <div class="grid md:grid-cols-2 gap-6">
-            <figure class="card bg-surface border border-line rounded-2xl p-7 md:p-8 reveal">
-                <div class="qmark mb-2">"</div>
-                <blockquote class="font-display text-lg font-normal text-paper leading-[1.55] -mt-5">
-                    If I had to describe Meghana in one line: she's the person you <span class="text-coral italic">trust with your brand voice.</span> She managed content across my YouTube, Instagram and course platform, and every piece felt authentically 'me' even though she wrote it. That's a rare skill.
-                </blockquote>
-                <figcaption class="flex items-center gap-3.5 mt-7 pt-6 border-t border-line">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-coral to-coral-deep flex items-center justify-center font-display italic font-semibold text-white text-sm shrink-0">S</div>
-                    <div>
-                        <p class="text-paper font-semibold text-sm">B. Jyothi Swaroop</p>
-                        <p class="text-muted text-xs">Associate Director, Scaler · Founder, MentiBY</p>
-                    </div>
-                </figcaption>
-            </figure>
-
-            <figure class="card bg-surface border border-line rounded-2xl p-7 md:p-8 reveal r-d1">
-                <div class="qmark mb-2">"</div>
-                <blockquote class="font-display text-lg font-normal text-paper leading-[1.55] -mt-5">
-                    Meghana brought a strong understanding of tech audiences to our content team. Her <span class="text-coral italic">UGC strategy helped us tell authentic student stories</span>, and her ability to adapt content across platforms while holding our brand voice was impressive. A fast learner who doesn't need hand-holding.
-                </blockquote>
-                <figcaption class="flex items-center gap-3.5 mt-7 pt-6 border-t border-line">
-                    <div class="w-10 h-10 rounded-full bg-surface-2 border border-line-2 flex items-center justify-center font-mono text-xs text-muted shrink-0">SC</div>
-                    <div>
-                        <p class="text-paper font-semibold text-sm">Team Scaler</p>
-                        <p class="text-muted text-xs">Scaler by InterviewBit, Content Team</p>
-                    </div>
-                </figcaption>
-            </figure>
         </div>
     </div>
 </section>
 
 <!-- ==================== CREDENTIALS ==================== -->
-<section class="py-24 md:py-32 bg-ink-2 border-y border-line">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
-            <span class="text-coral">08</span>
+<section class="py-20 md:py-28">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="eyebrow flex items-center gap-3 mb-10 reveal">
+            <span class="text-coral">04</span>
             <span class="h-px w-8 bg-coral/40"></span>
             <span class="text-muted">Credentials</span>
         </div>
-        <h2 class="font-display text-3xl md:text-[2.7rem] font-medium text-paper leading-tight tracking-tight mb-14 reveal">
-            Certifications, skills <span class="italic text-coral">&amp; education.</span>
-        </h2>
-
-        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
-            <div class="lg:col-span-5 reveal">
-                <h3 class="font-display text-lg font-medium text-paper mb-6">Certifications</h3>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-4 bg-surface rounded-xl p-4 border border-line">
-                        <div class="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center text-coral font-mono text-[0.6rem] font-medium shrink-0">AWS</div>
-                        <div>
-                            <p class="text-paper text-sm font-medium">AWS Certified Developer, Associate</p>
-                            <p class="text-faint text-xs">Amazon Web Services</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 bg-surface rounded-xl p-4 border border-line">
-                        <div class="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center text-coral font-mono text-[0.6rem] font-medium shrink-0">AZ</div>
-                        <div>
-                            <p class="text-paper text-sm font-medium">Azure Fundamentals (AZ-900)</p>
-                            <p class="text-faint text-xs">Microsoft</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 bg-surface rounded-xl p-4 border border-line">
-                        <div class="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center text-coral font-mono text-[0.6rem] font-medium shrink-0">AZ</div>
-                        <div>
-                            <p class="text-paper text-sm font-medium">Azure AI Engineer Associate (AZ-102)</p>
-                            <p class="text-faint text-xs">Microsoft</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 bg-surface rounded-xl p-4 border border-line">
-                        <div class="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center text-coral font-mono text-[0.6rem] font-medium shrink-0">PE</div>
-                        <div>
-                            <p class="text-paper text-sm font-medium">Prompt Engineering Certification</p>
-                            <p class="text-faint text-xs">20+ techniques mastered</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 bg-surface rounded-xl p-4 border border-line">
-                        <div class="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center text-coral font-mono text-[0.6rem] font-medium shrink-0">MS</div>
-                        <div>
-                            <p class="text-paper text-sm font-medium">MS Copilot Certification</p>
-                            <p class="text-faint text-xs">Microsoft</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 bg-surface rounded-xl p-4 border border-line">
-                        <div class="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center text-coral font-mono text-[0.6rem] font-medium shrink-0">ML</div>
-                        <div>
-                            <p class="text-paper text-sm font-medium">Intermediate ML Certificate</p>
-                            <p class="text-faint text-xs">Kaggle</p>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="font-display text-lg font-medium text-paper mt-9 mb-6">Education</h3>
-                <div class="bg-surface rounded-xl p-5 border border-line">
-                    <div class="flex items-start justify-between gap-3">
-                        <div>
-                            <p class="text-paper text-sm font-medium">B.Tech in Computer Science &amp; Engineering</p>
-                            <p class="text-muted text-xs mt-1">Vishnu Institute of Technology, Bhimavaram</p>
-                        </div>
-                        <span class="text-coral font-mono text-xs whitespace-nowrap">CGPA 8.31</span>
-                    </div>
-                    <p class="text-faint text-xs font-mono mt-3">2020 – 2024</p>
-                </div>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="reveal">
+                <h3 class="font-display text-lg font-medium text-paper mb-4">Certifications</h3>
+                <ul class="space-y-2.5 text-muted">
+                    <li class="flex gap-2.5"><span class="text-coral mt-2 shrink-0 w-1 h-1 rounded-full bg-coral"></span>AWS Certified Developer, Associate</li>
+                    <li class="flex gap-2.5"><span class="text-coral mt-2 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Azure Fundamentals (AZ-900) &amp; AI Engineer Associate (AZ-102)</li>
+                    <li class="flex gap-2.5"><span class="text-coral mt-2 shrink-0 w-1 h-1 rounded-full bg-coral"></span>Prompt Engineering Certification, 20+ techniques</li>
+                    <li class="flex gap-2.5"><span class="text-coral mt-2 shrink-0 w-1 h-1 rounded-full bg-coral"></span>MS Copilot Certification · Intermediate ML, Kaggle</li>
+                </ul>
             </div>
-
-            <div class="lg:col-span-7 reveal r-d1">
-                <h3 class="font-display text-lg font-medium text-paper mb-6">Skills</h3>
-                <div class="space-y-7">
-                    <div>
-                        <p class="eyebrow text-coral mb-3.5">Content &amp; Strategy</p>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="tag">Content Strategy</span>
-                            <span class="tag">Scriptwriting</span>
-                            <span class="tag">Content Calendars</span>
-                            <span class="tag">Brand Voice</span>
-                            <span class="tag">UGC Strategy</span>
-                            <span class="tag">Blog Writing</span>
-                            <span class="tag">ORM Scripting</span>
-                            <span class="tag">Technical Writing</span>
-                            <span class="tag">Course Design</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-3.5">AI &amp; Automation</p>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="tag">Prompt Engineering</span>
-                            <span class="tag">AI Video Pipelines</span>
-                            <span class="tag">LLM Integration</span>
-                            <span class="tag">HeyGen API</span>
-                            <span class="tag">ElevenLabs</span>
-                            <span class="tag">RAG Workflows</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-3.5">Technical</p>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="tag">Python</span>
-                            <span class="tag">HTML / CSS / JS</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">REST APIs</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">Azure</span>
-                            <span class="tag">Git / GitHub</span>
-                            <span class="tag">Selenium</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="eyebrow text-coral mb-3.5">Platforms</p>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="tag">YouTube</span>
-                            <span class="tag">Instagram</span>
-                            <span class="tag">LinkedIn</span>
-                            <span class="tag">Quora</span>
-                            <span class="tag">WordPress</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== WHAT I BRING ==================== -->
-<section class="py-24 md:py-32">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="eyebrow flex items-center gap-3 mb-8 reveal">
-            <span class="text-coral">09</span>
-            <span class="h-px w-8 bg-coral/40"></span>
-            <span class="text-muted">Strengths</span>
-        </div>
-        <h2 class="font-display text-3xl md:text-[2.9rem] font-medium text-paper leading-[1.1] tracking-tight mb-14 reveal">
-            What I <span class="italic text-coral">bring.</span>
-        </h2>
-
-        <div class="grid md:grid-cols-3 gap-5">
-            <div class="card bg-surface border border-line rounded-2xl p-7 md:p-8 reveal">
-                <div class="w-12 h-12 rounded-xl bg-coral/10 flex items-center justify-center text-coral mb-6" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h4M17 9h4M3 15h4M17 15h4M8 4v16M16 4v16"/></svg>
-                </div>
-                <h3 class="font-display text-xl font-medium text-paper mb-3">I think like a creator</h3>
-                <p class="text-muted text-sm leading-relaxed">I've worked <em class="text-paper not-italic font-medium">inside</em> creator businesses, not just observed them. I know what makes a video blow up, why a reel gets saved, and how to write hooks that stop the scroll, across <span class="text-paper">100+ videos</span> and <span class="text-paper">600K+ audience</span>.</p>
-            </div>
-            <div class="card bg-surface border border-coral/35 rounded-2xl p-7 md:p-8 reveal r-d1" style="box-shadow: 0 0 40px -16px rgba(255,107,107,0.45);">
-                <div class="w-12 h-12 rounded-xl bg-coral/10 flex items-center justify-center text-coral mb-6" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg>
-                </div>
-                <h3 class="font-display text-xl font-medium text-paper mb-3">I build like an engineer</h3>
-                <p class="text-muted text-sm leading-relaxed">With an engineering background, <span class="text-paper">AWS / Azure certifications</span> and hands-on AI experience, I bring technical depth most content people don't have. I don't just use AI tools; I understand how they work and <span class="text-coral font-medium">build workflows around them</span>.</p>
-            </div>
-            <div class="card bg-surface border border-line rounded-2xl p-7 md:p-8 reveal r-d2">
-                <div class="w-12 h-12 rounded-xl bg-coral/10 flex items-center justify-center text-coral mb-6" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 13h6l-1 9 9-11h-6z"/></svg>
-                </div>
-                <h3 class="font-display text-xl font-medium text-paper mb-3">I ship like a startup</h3>
-                <p class="text-muted text-sm leading-relaxed">I've juggled a full-time engineering role, freelance content for two brands, and startup operations, all <span class="text-paper">simultaneously</span>. I don't wait for instructions; I identify what needs doing and do it. I've never missed a deadline.</p>
-            </div>
-        </div>
-
-        <div class="card bg-surface border border-line rounded-2xl p-7 md:p-9 mt-5 reveal">
-            <div class="flex flex-col md:flex-row md:items-center gap-6">
-                <div class="w-16 h-16 rounded-2xl bg-coral/10 flex items-center justify-center text-coral shrink-0" aria-hidden="true">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>
-                </div>
-                <div>
-                    <p class="eyebrow text-coral mb-2">Future-proofed</p>
-                    <h4 class="font-display text-lg font-medium text-paper mb-2">I understand GEO, not just SEO</h4>
-                    <p class="text-muted text-sm md:text-base leading-relaxed">SEO is evolving into <span class="text-paper">GEO (Generative Engine Optimization)</span>: how content gets surfaced and cited by AI tools like ChatGPT, Perplexity and Google AI Overviews. I'm not just optimizing for Google Search anymore; I'm thinking about how AI models discover content. Most content strategists haven't caught up to this shift yet.</p>
+            <div class="reveal r-d1">
+                <h3 class="font-display text-lg font-medium text-paper mb-4">Education</h3>
+                <p class="text-paper font-medium">B.Tech, Computer Science &amp; Engineering</p>
+                <p class="text-muted text-sm mt-1">Vishnu Institute of Technology, Bhimavaram</p>
+                <p class="text-faint text-sm font-mono mt-1.5">2020 – 2024 · CGPA 8.31</p>
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="tag">HeyGen</span>
+                    <span class="tag">ElevenLabs</span>
+                    <span class="tag">Claude &amp; ChatGPT</span>
+                    <span class="tag">Canva</span>
+                    <span class="tag">Premiere</span>
+                    <span class="tag">Python</span>
                 </div>
             </div>
         </div>
@@ -1257,68 +622,49 @@
 </section>
 
 <!-- ==================== CONTACT ==================== -->
-<section id="contact" class="relative py-24 md:py-32 bg-ink-2 border-t border-line overflow-hidden">
+<section id="contact" class="relative py-20 md:py-28 bg-ink-2 border-t border-line overflow-hidden">
     <div class="absolute inset-0 -z-10" style="background: radial-gradient(ellipse 55% 60% at 50% 100%, rgba(255,107,107,0.12), transparent 70%);"></div>
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 text-center">
-        <p class="eyebrow text-coral mb-6 reveal">Let's talk</p>
-        <h2 class="font-display text-4xl md:text-6xl font-medium text-paper leading-[1.08] tracking-tight mb-6 reveal r-d1">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+        <h2 class="font-display text-3xl md:text-5xl font-medium text-paper leading-[1.1] tracking-tight mb-5 reveal">
             Let's build something<br><span class="italic grad-coral">together.</span>
         </h2>
-        <p class="text-muted text-lg max-w-xl mx-auto leading-relaxed reveal r-d2 mb-2">
-            Currently open to full-time <span class="text-paper">Content Strategy</span>, <span class="text-paper">AI Content</span> and <span class="text-paper">Social Media Management</span> roles.
+        <p class="text-muted leading-relaxed reveal r-d1 mb-9">
+            Open to full-time Content Strategy, AI Content and Social Media roles. Based in Chennai, open to Bangalore and Remote.
         </p>
-        <p class="text-faint text-sm reveal r-d2 mb-12">Based in Chennai, Tamil Nadu. Open to Bangalore &amp; Remote.</p>
 
-        <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10 reveal r-d3">
-            <a href="mailto:reddy.meghana0802@gmail.com" class="card group bg-surface border border-line rounded-xl p-6 text-center">
-                <div class="w-11 h-11 rounded-lg bg-coral/10 flex items-center justify-center text-coral mx-auto mb-3.5" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-                </div>
-                <p class="text-paper text-sm font-medium">Email</p>
-                <p class="text-muted text-xs mt-1 break-all">reddy.meghana0802@gmail.com</p>
+        <div class="flex flex-wrap justify-center gap-3 reveal r-d2">
+            <a href="https://wa.me/918185924767?text=Hi%20Meghana%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20content%20role." target="_blank" rel="noopener" class="btn-glow inline-flex items-center gap-2.5 bg-coral hover:bg-coral-deep text-white font-semibold px-6 py-3.5 rounded-xl">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+                Book a call
             </a>
-            <a href="tel:+918185924767" class="card group bg-surface border border-line rounded-xl p-6 text-center">
-                <div class="w-11 h-11 rounded-lg bg-coral/10 flex items-center justify-center text-coral mx-auto mb-3.5" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-3 2a13 13 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
-                </div>
-                <p class="text-paper text-sm font-medium">Phone</p>
-                <p class="text-muted text-xs mt-1">+91 81859 24767</p>
+            <a href="mailto:reddy.meghana0802@gmail.com" class="inline-flex items-center gap-2.5 border border-line-2 hover:border-coral text-paper font-semibold px-6 py-3.5 rounded-xl transition hover:bg-white/[0.02]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                Email me
             </a>
-            <div class="card bg-surface border border-line rounded-xl p-6 text-center">
-                <div class="w-11 h-11 rounded-lg bg-coral/10 flex items-center justify-center text-coral mx-auto mb-3.5" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
-                </div>
-                <p class="text-paper text-sm font-medium">Languages</p>
-                <p class="text-muted text-xs mt-1">English · Telugu · Hindi</p>
-            </div>
-        </div>
-
-        <div class="flex justify-center gap-3.5 mb-12 reveal r-d3">
-            <a href="https://linkedin.com/in/meghana-reddy-b27831212" target="_blank" rel="noopener" class="w-12 h-12 rounded-xl bg-surface border border-line hover:border-coral hover:text-coral text-muted flex items-center justify-center transition" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="https://github.com/20pa1a05eoRMeghana" target="_blank" rel="noopener" class="w-12 h-12 rounded-xl bg-surface border border-line hover:border-coral hover:text-coral text-muted flex items-center justify-center transition" aria-label="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            </a>
-            <a href="https://instagram.com/__reddy_meghana_" target="_blank" rel="noopener" class="w-12 h-12 rounded-xl bg-surface border border-line hover:border-coral hover:text-coral text-muted flex items-center justify-center transition" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            <a href="Meghana_Reddy_Resume.pdf" download class="inline-flex items-center gap-2.5 border border-line-2 hover:border-coral text-paper font-semibold px-6 py-3.5 rounded-xl transition hover:bg-white/[0.02]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 4 5-4"/><path d="M5 21h14"/></svg>
+                Résumé
             </a>
         </div>
 
-        <a href="Meghana_Reddy_Resume.pdf" download class="btn-glow group inline-flex items-center gap-2.5 bg-coral hover:bg-coral-deep text-white font-semibold px-8 py-4 rounded-xl text-lg reveal r-d4">
-            Download my résumé
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-y-0.5"><path d="M12 3v12"/><path d="m7 11 5 4 5-4"/><path d="M5 21h14"/></svg>
-        </a>
+        <div class="flex justify-center gap-3.5 mt-9 reveal r-d2">
+            <a href="https://linkedin.com/in/meghana-reddy-b27831212" target="_blank" rel="noopener" class="w-11 h-11 rounded-xl bg-surface border border-line hover:border-coral hover:text-coral text-muted flex items-center justify-center transition" aria-label="LinkedIn">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://github.com/20pa1a05eoRMeghana" target="_blank" rel="noopener" class="w-11 h-11 rounded-xl bg-surface border border-line hover:border-coral hover:text-coral text-muted flex items-center justify-center transition" aria-label="GitHub">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="https://instagram.com/__reddy_meghana_" target="_blank" rel="noopener" class="w-11 h-11 rounded-xl bg-surface border border-line hover:border-coral hover:text-coral text-muted flex items-center justify-center transition" aria-label="Instagram">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+        </div>
     </div>
 </section>
 
 <!-- ==================== FOOTER ==================== -->
-<footer class="py-10 border-t border-line">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-5">
-        <div class="flex items-center gap-3">
-            <span class="font-display text-lg font-medium text-paper">Meghana Reddy<span class="text-coral">.</span></span>
-            <span class="text-faint text-sm hidden sm:inline">Content Strategist &amp; AI Content Specialist</span>
-        </div>
+<footer class="py-8 border-t border-line">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span class="font-display text-lg font-medium text-paper">Meghana Reddy<span class="text-coral">.</span></span>
         <div class="flex items-center gap-6">
             <p class="text-faint text-xs">© 2026 Meghana Reddy</p>
             <a href="#hero" class="link-arrow inline-flex items-center gap-1.5 text-xs text-muted hover:text-coral transition">
@@ -1331,13 +677,12 @@
 
 <!-- ==================== SCRIPTS ==================== -->
 <script>
-    // Mobile nav
     function toggleNav() {
         document.querySelector('.hamburger').classList.toggle('open');
         document.querySelector('.mobile-nav').classList.toggle('open');
     }
 
-    // Interactive "Sound familiar" pain cards
+    // Interactive pain cards
     function togglePain(btn) {
         const solved = btn.classList.toggle('solved');
         btn.setAttribute('aria-pressed', solved ? 'true' : 'false');
@@ -1352,13 +697,9 @@
         const resultEl = document.getElementById('pain-result');
         if (countEl) countEl.textContent = solved;
         if (msgEl) {
-            if (solved === 0) {
-                msgEl.textContent = "Tap a card above. Be honest, every content hire has a story behind them.";
-            } else if (solved === cards.length) {
-                msgEl.textContent = "Every single one. That's not luck, it's how Meghana works.";
-            } else {
-                msgEl.textContent = "You've recognized " + solved + ". That's exactly the gap Meghana was hired to close, every time.";
-            }
+            if (solved === 0) msgEl.textContent = "Tap a card. Be honest, every content hire has a story behind them.";
+            else if (solved === cards.length) msgEl.textContent = "Every one. That's not luck, it's how Meghana works.";
+            else msgEl.textContent = "You've recognized " + solved + ". That's exactly the gap Meghana is built to close.";
         }
         if (resultEl) resultEl.classList.toggle('all-solved', solved === cards.length);
     }
@@ -1430,7 +771,6 @@
     runCounters();
     onScroll();
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const target = document.querySelector(this.getAttribute('href'));
