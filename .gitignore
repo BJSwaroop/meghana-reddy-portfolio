@@ -1,0 +1,5 @@
+# Private and internal files: not part of the public portfolio site
+*.xlsx
+*.docx
+.~lock.*
+.DS_Store
